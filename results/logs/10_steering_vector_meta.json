@@ -1,0 +1,8 @@
+{
+  "experiment": "10_steering_vector",
+  "best_layer": 32,
+  "hidden_dim": 2048,
+  "norm": 30.680997848510742,
+  "n_correct": 393,
+  "n_hallucinated": 307
+}

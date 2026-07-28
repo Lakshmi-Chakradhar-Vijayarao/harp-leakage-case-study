@@ -1,0 +1,99 @@
+{
+  "experiment": "22c_perquadrant_steering",
+  "best_layer": 32,
+  "n_total_hallucinated": 307,
+  "entropy_threshold": 0.3704,
+  "quadrant_alphas": {
+    "epistemic": [
+      0.0,
+      0.5,
+      1.0,
+      1.5
+    ],
+    "aleatoric": [
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "confident_hallucination": [
+      -1.5,
+      -1.0,
+      -0.5,
+      0.0
+    ],
+    "confident_correct": [
+      -0.5,
+      0.0
+    ]
+  },
+  "per_q_sweep": {
+    "epistemic": {
+      "0.0": 0.7632,
+      "0.5": 0.75,
+      "1.0": 0.7368,
+      "1.5": 0.7105
+    },
+    "aleatoric": {
+      "0.5": 0.7018,
+      "1.0": 0.614,
+      "1.5": 0.7368,
+      "2.0": 0.7368
+    },
+    "confident_hallucination": {
+      "-1.5": 0.8639,
+      "-1.0": 0.7959,
+      "-0.5": 0.8027,
+      "0.0": 0.8027
+    },
+    "confident_correct": {
+      "-0.5": 0.4444,
+      "0.0": 0.4815
+    }
+  },
+  "per_q_optimal": {
+    "epistemic": 1.5,
+    "aleatoric": 1.0,
+    "confident_hallucination": -1.0,
+    "confident_correct": -0.5
+  },
+  "combined": {
+    "hall_rate": 0.7459,
+    "ci_lo": 0.6906,
+    "ci_hi": 0.7948,
+    "n": 307,
+    "per_q_breakdown": {
+      "epistemic": {
+        "corrected": 21,
+        "wrong": 55,
+        "hall_rate": 0.7237,
+        "optimal_alpha": 1.5
+      },
+      "aleatoric": {
+        "corrected": 14,
+        "wrong": 43,
+        "hall_rate": 0.7544,
+        "optimal_alpha": 1.0
+      },
+      "confident_hallucination": {
+        "corrected": 30,
+        "wrong": 117,
+        "hall_rate": 0.7959,
+        "optimal_alpha": -1.0
+      },
+      "confident_correct": {
+        "corrected": 13,
+        "wrong": 14,
+        "hall_rate": 0.5185,
+        "optimal_alpha": -0.5
+      }
+    }
+  },
+  "comparison": {
+    "universal": 0.67,
+    "exp22_shared_alpha": 0.68,
+    "exp22c_per_quadrant": 0.7459,
+    "improvement_vs_univ": -0.0759,
+    "improvement_vs_exp22": -0.0659
+  }
+}

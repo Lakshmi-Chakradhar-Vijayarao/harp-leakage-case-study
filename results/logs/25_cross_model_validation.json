@@ -1,0 +1,61 @@
+{
+  "experiment": "gap_fix_A_gpt2_medium",
+  "model": "openai-community/gpt2-medium",
+  "n_samples": 500,
+  "probe_layers": [
+    18,
+    19,
+    20,
+    21,
+    22
+  ],
+  "n_splits": 5,
+  "layer_results": [
+    {
+      "layer_label": "L18",
+      "auroc_mean": 0.5787,
+      "auroc_std": 0.0594,
+      "layer_idx": 18
+    },
+    {
+      "layer_label": "L19",
+      "auroc_mean": 0.5445,
+      "auroc_std": 0.0595,
+      "layer_idx": 19
+    },
+    {
+      "layer_label": "L20",
+      "auroc_mean": 0.5381,
+      "auroc_std": 0.0546,
+      "layer_idx": 20
+    },
+    {
+      "layer_label": "L21",
+      "auroc_mean": 0.5487,
+      "auroc_std": 0.0342,
+      "layer_idx": 21
+    },
+    {
+      "layer_label": "L22",
+      "auroc_mean": 0.5627,
+      "auroc_std": 0.034,
+      "layer_idx": 22
+    }
+  ],
+  "best_layer": {
+    "layer_label": "L18",
+    "auroc_mean": 0.5787,
+    "auroc_std": 0.0594,
+    "layer_idx": 18
+  },
+  "harp_qwen3b_auroc": 0.775,
+  "verdict": "WEAK_TRANSFER",
+  "key_finding": "Weak geometry signal at GPT-2 Medium. Best AUROC=0.579 at L18. Signal is above chance but below the 0.65 threshold. Scale matters: signal strengthens with model size.",
+  "methodology": {
+    "prompts": "Same 700 TruthfulQA prompts as HaRP training set",
+    "labels": "Same ROUGE-L labels as HaRP",
+    "probe": "Fresh OOF logistic regression on GPT-2 Medium HS (not HaRP probe)",
+    "layers": "Probed L18-L22 (88% depth band)",
+    "rationale": "Depth-equivalent to HaRP's L32/36 = L21.3 for GPT-2 Medium 24-layer"
+  }
+}

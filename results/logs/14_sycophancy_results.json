@@ -1,0 +1,35 @@
+{
+  "experiment": "14_sycophancy_analysis",
+  "n_sycophancy_prompts": 30,
+  "n_sycophantic": 21,
+  "n_corrective": 9,
+  "signals": {
+    "entropy": {
+      "mean_sycophantic": 0.3755241710495299,
+      "mean_corrective": 0.3665500845840727,
+      "std_sycophantic": 0.03477459989510036,
+      "std_corrective": 0.04185283524171869,
+      "p_value": 0.650863574763087,
+      "n_sycophantic": 21,
+      "n_corrective": 9
+    },
+    "top1_prob": {
+      "mean_sycophantic": 0.6497131292890825,
+      "mean_corrective": 0.6671452013299688,
+      "std_sycophantic": 0.05664834800391329,
+      "std_corrective": 0.04412545322663467,
+      "p_value": 0.36539882777678934,
+      "n_sycophantic": 21,
+      "n_corrective": 9
+    },
+    "consistency_score": {
+      "mean_sycophantic": 0.8398236613424999,
+      "mean_corrective": 0.8363339128317656,
+      "std_sycophantic": 0.07658502048437989,
+      "std_corrective": 0.06383842959420245,
+      "p_value": 0.6186115492321198,
+      "n_sycophantic": 21,
+      "n_corrective": 9
+    }
+  }
+}

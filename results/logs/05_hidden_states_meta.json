@@ -1,0 +1,10 @@
+{
+  "experiment": "05_extract_hidden_states",
+  "n_samples": 700,
+  "n_correct": 393,
+  "n_hallucinated": 307,
+  "num_layers": 37,
+  "hidden_dim": 2048,
+  "dtype": "float16",
+  "file_mb": 93.68
+}

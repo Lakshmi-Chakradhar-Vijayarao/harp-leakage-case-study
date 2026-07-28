@@ -1,0 +1,23 @@
+{
+  "experiment": "19_cross_model_validation",
+  "primary_model": "qwen2.5:3b",
+  "transfer_model": "llama3.2:1b",
+  "n_cross_samples": 150,
+  "synthetic": true,
+  "qwen_auroc": 0.13914027149321267,
+  "llama_n_samples": 150,
+  "llama_hallucination_rate": 0.4866666666666667,
+  "llama_auroc": 0.6679325396825397,
+  "transfer_auroc": 0.4873687955879737,
+  "transfer_gap": 0.18056374409456605,
+  "signals_are_model_agnostic": false,
+  "ks_entropy": {
+    "ks_stat": 0.5057364341085271,
+    "p_value": 1.5518951626636634e-26
+  },
+  "ks_consistency_score": {
+    "ks_stat": 0.4948837209302326,
+    "p_value": 2.265416722689683e-25
+  },
+  "conclusion": "Zero-shot transfer AUROC 0.4873687955879737 vs Llama within-model 0.6679325396825397 \u2014 signals are model-specific (recalibration may help)."
+}

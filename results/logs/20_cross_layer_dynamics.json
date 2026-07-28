@@ -1,0 +1,48 @@
+{
+  "experiment": "20_cross_layer_dynamics",
+  "n_samples": 700,
+  "num_layers": 37,
+  "best_layer": 32,
+  "n_features": 5,
+  "features": [
+    "traj_total_variation",
+    "traj_stabilization_layer",
+    "traj_max_change_layer",
+    "traj_early_commitment",
+    "icr_score"
+  ],
+  "individual_auroc": {
+    "traj_total_variation": 0.5049,
+    "traj_stabilization_layer": 0.5,
+    "traj_max_change_layer": 0.5,
+    "traj_early_commitment": 0.3328,
+    "icr_score": 0.3507
+  },
+  "class_analysis": {
+    "traj_total_variation": {
+      "mean_correct": 4.134134,
+      "mean_hallucinated": 4.131556,
+      "delta": 0.002578
+    },
+    "traj_stabilization_layer": {
+      "mean_correct": 1.0,
+      "mean_hallucinated": 1.0,
+      "delta": 0.0
+    },
+    "traj_max_change_layer": {
+      "mean_correct": 0.0,
+      "mean_hallucinated": 0.0,
+      "delta": 0.0
+    },
+    "traj_early_commitment": {
+      "mean_correct": 0.78865,
+      "mean_hallucinated": 0.799683,
+      "delta": -0.011033
+    },
+    "icr_score": {
+      "mean_correct": 0.013843,
+      "mean_hallucinated": 0.017097,
+      "delta": -0.003254
+    }
+  }
+}

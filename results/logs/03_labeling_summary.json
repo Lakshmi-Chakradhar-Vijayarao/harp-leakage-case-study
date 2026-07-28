@@ -1,0 +1,27 @@
+{
+  "total": 930,
+  "n_correct": 555,
+  "n_hallucinated": 375,
+  "pct_hall": 40.3,
+  "per_dataset": {
+    "truthfulqa": {
+      "n": 500,
+      "n_correct": 383,
+      "n_hallucinated": 117,
+      "pct_hall": 23.4
+    },
+    "nq": {
+      "n": 300,
+      "n_correct": 110,
+      "n_hallucinated": 190,
+      "pct_hall": 63.3
+    },
+    "adversarial": {
+      "n": 130,
+      "n_correct": 62,
+      "n_hallucinated": 68,
+      "pct_hall": 52.3
+    }
+  },
+  "group_a_nan_pct": 33.33
+}

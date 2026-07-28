@@ -1,0 +1,58 @@
+{
+  "experiment": "13_baselines",
+  "n_test": 86,
+  "alpha_star": 0.1,
+  "beta_star": 0.5,
+  "results": [
+    {
+      "name": "Raw LLM",
+      "hall_rate": 0.3953,
+      "abstain_rate": 0.0,
+      "n_accept": 86,
+      "n_abstain": 0,
+      "auroc": NaN,
+      "description": "Accept all outputs, no filtering"
+    },
+    {
+      "name": "Static top1_prob > 0.5",
+      "hall_rate": 0.3953,
+      "abstain_rate": 0.0,
+      "n_accept": 86,
+      "n_abstain": 0,
+      "auroc": 0.5350678733031675,
+      "description": "Abstain if mean top-1 probability < 0.5"
+    },
+    {
+      "name": "Temperature scaling",
+      "hall_rate": 0.3953,
+      "abstain_rate": 0.0,
+      "n_accept": 86,
+      "n_abstain": 0,
+      "auroc": 0.5,
+      "T": 0.1,
+      "description": "Platt scaling on top1_prob, T=0.100"
+    },
+    {
+      "name": "Entropy-only policy",
+      "hall_rate": 0.2857,
+      "abstain_rate": 0.0,
+      "n_accept": 14,
+      "n_abstain": 0,
+      "auroc": 0.45984162895927605,
+      "alpha_star": 0.40000000000000013,
+      "beta_star": 0.8000000000000003,
+      "description": "Group A only with optimised thresholds"
+    },
+    {
+      "name": "HaRP (full)",
+      "hall_rate": 0.0,
+      "abstain_rate": 0.2093,
+      "n_accept": 9,
+      "n_abstain": 18,
+      "auroc": 0.14592760180995476,
+      "alpha_star": 0.1,
+      "beta_star": 0.5,
+      "description": "All 14 features, \u03b1*=0.10, \u03b2*=0.50"
+    }
+  ]
+}

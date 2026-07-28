@@ -1,0 +1,109 @@
+{
+  "experiment": "24_honest_evaluation",
+  "n_samples": 700,
+  "n_features": 22,
+  "leakage_correction": {
+    "probe_conf_insample_auroc": 1.0,
+    "probe_conf_oof_auroc": 0.7572751158299558,
+    "inflation": 0.2427
+  },
+  "ablation": {
+    "Group A only": {
+      "label": "Group A only (token signals)",
+      "model_type": "lr",
+      "n_features": 6,
+      "auroc_mean": 0.5734211113954603,
+      "auroc_std": 0.05580254995822058,
+      "f1_mean": 0.5691585899726386,
+      "n_splits": 5
+    },
+    "Group A+B": {
+      "label": "Group A+B (+cosine consistency)",
+      "model_type": "lr",
+      "n_features": 8,
+      "auroc_mean": 0.5936263542556509,
+      "auroc_std": 0.07304345800141229,
+      "f1_mean": 0.6039122746584834,
+      "n_splits": 5
+    },
+    "Group A+B+C": {
+      "label": "Group A+B+C (token+consist+repr)",
+      "model_type": "lr",
+      "n_features": 12,
+      "auroc_mean": 0.7713592340492581,
+      "auroc_std": 0.04742859970665371,
+      "f1_mean": 0.7707843217690418,
+      "n_splits": 5
+    },
+    "Full v3 (A+B+B2+C+C2)": {
+      "label": "Full v3 (+attn entropy)",
+      "model_type": "lr",
+      "n_features": 14,
+      "auroc_mean": 0.7713592340492581,
+      "auroc_std": 0.04742859970665371,
+      "f1_mean": 0.7707843217690418,
+      "n_splits": 5
+    },
+    "v4 (A+B+B2+C+C2+D)": {
+      "label": "v4 (+trajectory dynamics)",
+      "model_type": "lr",
+      "n_features": 19,
+      "auroc_mean": 0.7764893357918948,
+      "auroc_std": 0.041853498303255444,
+      "f1_mean": 0.7540173642583646,
+      "n_splits": 5
+    },
+    "SOTA (all groups)": {
+      "label": "SOTA (+geometric volume)",
+      "model_type": "lr",
+      "n_features": 22,
+      "auroc_mean": 0.7752500999369912,
+      "auroc_std": 0.04162754008454758,
+      "f1_mean": 0.7557436189925519,
+      "n_splits": 5
+    },
+    "MLP (SOTA)": {
+      "label": "MLP SOTA (ablation)",
+      "model_type": "mlp",
+      "n_features": 22,
+      "auroc_mean": 0.7331550859046191,
+      "auroc_std": 0.030911135263430173,
+      "f1_mean": 0.7352868512454709,
+      "n_splits": 5
+    }
+  },
+  "auroc_group_a": 0.5734211113954603,
+  "auroc_group_abc_honest": 0.7713592340492581,
+  "auroc_sota_honest": 0.7752500999369912,
+  "delta_a_to_abc": 0.19793812265379784,
+  "delta_a_to_sota": 0.20182898854153097,
+  "test_auroc": 0.7870927578335754,
+  "test_auarc": 0.7494855999451852,
+  "auroc_ci_95": {
+    "lo": 0.7056710090984286,
+    "hi": 0.8658995398117745
+  },
+  "alpha_star": 0.15000000000000002,
+  "beta_star": 0.9000000000000004,
+  "n_train": 420,
+  "n_val": 140,
+  "n_test": 140,
+  "test_policy_metrics": {
+    "n_total": 140,
+    "n_accept": 6,
+    "n_regenerate": 126,
+    "n_abstain": 8,
+    "accept_rate": 0.0429,
+    "regen_rate": 0.9,
+    "abstain_rate": 0.0571,
+    "hall_rate_accepted": 0.1667,
+    "hall_rate_accepted_ci_95": {
+      "lo": 0.0042,
+      "hi": 0.6412,
+      "n_hall": 1,
+      "n_accept": 6,
+      "note": "Clopper-Pearson exact binomial 95% CI"
+    },
+    "hall_rate_served": 0.4091
+  }
+}

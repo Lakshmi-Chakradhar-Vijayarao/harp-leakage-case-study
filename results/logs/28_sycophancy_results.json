@@ -1,0 +1,18 @@
+{
+  "experiment": "sycophancy_geometry_probe",
+  "behavior_distribution": {
+    "HONEST": 351,
+    "ALREADY_WRONG": 120,
+    "SYCOPHANTIC": 29
+  },
+  "probe_A": {
+    "auroc_mean": 0.404,
+    "auroc_std": 0.0988
+  },
+  "probe_B": {
+    "auroc_mean": 0.4425,
+    "auroc_std": 0.1357
+  },
+  "verdict": "REPLACE_THESIS_WORD",
+  "threshold": 0.65
+}

@@ -1,0 +1,80 @@
+{
+  "experiment": "22_quadrant_adaptive_steering",
+  "best_layer": 32,
+  "n_examples": 100,
+  "alphas": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "quadrant_counts": {
+    "epistemic": 23,
+    "aleatoric": 21,
+    "confident_hallucination": 47,
+    "confident_correct": 9
+  },
+  "vectors_computed": {
+    "epistemic": true,
+    "aleatoric": true,
+    "confident_hallucination": true,
+    "confident_correct": true
+  },
+  "adaptive_results": {
+    "overall_by_alpha": {
+      "0.0": 0.69,
+      "0.5": 0.7,
+      "1.0": 0.68
+    },
+    "epistemic": {
+      "by_alpha": {
+        "0.0": 0.6522,
+        "0.5": 0.6087,
+        "1.0": 0.6522
+      },
+      "best_hall_rate": 0.6087,
+      "best_alpha": 0.5
+    },
+    "aleatoric": {
+      "by_alpha": {
+        "0.0": 0.7143,
+        "0.5": 0.7143,
+        "1.0": 0.5714
+      },
+      "best_hall_rate": 0.5714,
+      "best_alpha": 1.0
+    },
+    "confident_hallucination": {
+      "by_alpha": {
+        "0.0": 0.7447,
+        "0.5": 0.766,
+        "1.0": 0.766
+      },
+      "best_hall_rate": 0.7447,
+      "best_alpha": 0.0
+    },
+    "confident_correct": {
+      "by_alpha": {
+        "0.0": 0.4444,
+        "0.5": 0.5556,
+        "1.0": 0.5556
+      },
+      "best_hall_rate": 0.4444,
+      "best_alpha": 0.0
+    }
+  },
+  "universal_results": {
+    "by_alpha": {
+      "0.0": 0.67,
+      "0.5": 0.69,
+      "1.0": 0.68,
+      "1.5": 0.72,
+      "2.0": 0.74
+    },
+    "best_alpha": 0.0,
+    "overall": {
+      "best_hall_rate": 0.67
+    }
+  },
+  "best_adaptive_alpha": 1.0,
+  "best_adaptive_hall": 0.68
+}

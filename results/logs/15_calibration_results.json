@@ -1,0 +1,16 @@
+{
+  "experiment": "15_calibration",
+  "n_test": 86,
+  "systems": {
+    "raw_llm": {
+      "ece": 0.07152
+    },
+    "temp_scaling": {
+      "ece": 0.39535,
+      "T_star": 0.1
+    },
+    "harp_full": {
+      "ece": 0.03857
+    }
+  }
+}

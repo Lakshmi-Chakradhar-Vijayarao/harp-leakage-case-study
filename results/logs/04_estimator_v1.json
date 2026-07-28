@@ -1,0 +1,47 @@
+{
+  "experiment": "04_estimator_v1",
+  "n_samples": 930,
+  "n_features": 6,
+  "features": [
+    "entropy",
+    "max_entropy",
+    "logit_var",
+    "conf_gap",
+    "top1_prob",
+    "first_entropy"
+  ],
+  "cv_auroc_mean": 0.5469309309309309,
+  "cv_auroc_std": 0.025751512609222094,
+  "cv_f1_mean": 0.5610566274449739,
+  "test_auroc": 0.5144744744744745,
+  "test_auroc_ci": {
+    "lo_95": 0.434579802668673,
+    "hi_95": 0.591473396337587
+  },
+  "baselines": {
+    "random": 0.5,
+    "static_top1": 0.44656336336336333
+  },
+  "feature_importances": [
+    {
+      "feature": "logit_var",
+      "coefficient": -0.4845538885898763,
+      "abs_coef": 0.4845538885898763
+    },
+    {
+      "feature": "entropy",
+      "coefficient": -0.42533340183928064,
+      "abs_coef": 0.42533340183928064
+    },
+    {
+      "feature": "conf_gap",
+      "coefficient": 0.035005636012374365,
+      "abs_coef": 0.035005636012374365
+    },
+    {
+      "feature": "max_entropy",
+      "coefficient": 0.03362501232813389,
+      "abs_coef": 0.03362501232813389
+    }
+  ]
+}

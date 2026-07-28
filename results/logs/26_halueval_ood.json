@@ -1,0 +1,12 @@
+{
+  "experiment": "gap_fix_B_halueval",
+  "n_samples": 500,
+  "harp_tqa_auroc": 0.775,
+  "zero_shot_auroc": 0.0942,
+  "indomain_auroc": 0.9966,
+  "indomain_std": 0.0035,
+  "transfer_gap": 0.9025,
+  "signal_retention_pct": -111.5,
+  "baseline": 0.57,
+  "verdict": "NO_GENERALIZATION"
+}

@@ -1,0 +1,13 @@
+{
+  "experiment": "09b_oof_group_c",
+  "best_layer": 32,
+  "n_hs_samples": 700,
+  "n_splits": 5,
+  "probe_conf_auroc_insample": 1.0,
+  "probe_conf_auroc_oof": 0.7572751158299558,
+  "leakage_delta": 0.2427,
+  "cos_correct_auroc_insample": 0.6674872151909226,
+  "cos_correct_auroc_oof": 0.6637657375405094,
+  "output_csv": "/Users/chakrivijayarao/Desktop/harp/data/processed/features_combined_oof.csv",
+  "interpretation": "probe_conf in Exp 09 was computed in-sample (probe fitted on all 700 samples, then predicted on same 700). In-sample AUROC=1.0 inflated the failure estimator. OOF AUROC matches Exp 06 CV result (~0.75), representing the true generalisation performance of the probe signal."
+}

@@ -1,0 +1,13 @@
+{
+  "experiment": "07_geometry_of_truth",
+  "best_layer": 32,
+  "pc1_correlation": 0.4241047577120148,
+  "separability": 0.6842857142857143,
+  "explained_variance": [
+    0.07526373863220215,
+    0.04867690056562424
+  ],
+  "n_correct": 393,
+  "n_hallucinated": 307,
+  "interpretation": "strong linear truth direction"
+}

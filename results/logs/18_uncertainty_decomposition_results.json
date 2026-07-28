@@ -1,0 +1,44 @@
+{
+  "experiment": "18_uncertainty_decomposition",
+  "n_samples": 873,
+  "features_source": "features_combined.csv",
+  "has_group_c": true,
+  "entropy_threshold": 0.4036166701659391,
+  "consistency_threshold": 0.8212295293807983,
+  "quadrant_counts": {
+    "epistemic": 46,
+    "aleatoric": 129,
+    "confident_correct": 343,
+    "confident_hallucination": 355
+  },
+  "quadrant_hall_rates": {
+    "epistemic": 0.2826,
+    "aleatoric": 0.4031,
+    "confident_correct": 0.2711,
+    "confident_hallucination": 0.6113
+  },
+  "epistemic_aleatoric_ratio": 0.3566,
+  "taxonomy_validation": {
+    "epistemic_vs_aleatoric_hall_rate": {
+      "epistemic": 0.2826,
+      "aleatoric": 0.4031,
+      "hypothesis": "epistemic > aleatoric expected",
+      "supported": false
+    },
+    "entropy_ch_lower_than_ep": {
+      "mean_ch": 0.3361894634602579,
+      "mean_ep": 0.42026727439489087,
+      "p_value": 1.2443675701337368e-28,
+      "hypothesis": "confident_hallucination has lower entropy than epistemic",
+      "supported": true
+    },
+    "group_c_critical_for_ch": {
+      "mean_cos_hall_in_CH": 0.14501966137281602,
+      "mean_cos_hall_in_CC": 0.12243633193802898,
+      "p_value": 0.9997120423624192,
+      "hypothesis": "cos_hallucinated is LOWER in confident_hallucination quadrant (closer to hallucinated mean)",
+      "supported": false
+    }
+  },
+  "key_finding": "Confident hallucination quadrant has LOW entropy (mean=0.3362) but is detectable via Group C cos_hallucinated \u2014 demonstrates necessity of representation signals beyond token entropy."
+}

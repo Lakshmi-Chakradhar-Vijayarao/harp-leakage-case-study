@@ -1,0 +1,49 @@
+{
+  "experiment": "12_run_policy",
+  "n_features": 14,
+  "features": [
+    "entropy",
+    "max_entropy",
+    "logit_var",
+    "conf_gap",
+    "top1_prob",
+    "first_entropy",
+    "consistency_score",
+    "consistency_variance",
+    "cos_correct",
+    "cos_hallucinated",
+    "h_norm",
+    "probe_conf",
+    "attn_entropy_mean",
+    "attn_entropy_std"
+  ],
+  "n_train": 258,
+  "n_val": 86,
+  "n_test": 86,
+  "alpha_star": 0.1,
+  "beta_star": 0.5,
+  "val_loss": 0.044180000000000004,
+  "lambda": 0.2,
+  "test_metrics": {
+    "n_total": 86,
+    "n_accept": 9,
+    "n_regenerate": 59,
+    "n_abstain": 18,
+    "accept_rate": 0.1047,
+    "regen_rate": 0.686,
+    "abstain_rate": 0.2093,
+    "hall_rate_accepted": 0.0,
+    "hall_rate_served": 0.2353
+  },
+  "policy_summary": {
+    "n_total": 86,
+    "n_accept": 9,
+    "n_regenerate": 59,
+    "n_abstain": 18,
+    "accept_rate": 0.1047,
+    "regen_rate": 0.686,
+    "abstain_rate": 0.2093,
+    "hall_rate_accepted": 0.0,
+    "hall_rate_served": 0.2353
+  }
+}

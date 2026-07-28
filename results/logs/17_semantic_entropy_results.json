@@ -1,0 +1,11 @@
+{
+  "experiment": "17_semantic_entropy_analysis",
+  "n_samples": 930,
+  "n_valid_sem_entropy": 300,
+  "auroc_cosine_consistency": 0.5748228228228228,
+  "auroc_semantic_entropy": 0.4385416666666666,
+  "delta_auroc": -0.1362811561561562,
+  "mean_semantic_entropy_correct": 0.9669201126005557,
+  "mean_semantic_entropy_hallucinated": 0.9695722549684466,
+  "mean_entropy_gap": 0.12595937956084774
+}
