@@ -4,9 +4,8 @@ This repository ships the specific code and result logs needed to independently
 verify Case Study 1 (full-dataset fit-then-score feature leakage) from
 "Not All Leaks Are Equal: A Taxonomy and Audit of Label-Information Leakage in
 Hidden-State Hallucination Detection." HaRP itself is a separate,
-Qwen2.5-3B-based hallucination-detection project; this repo contains the
-subset of it relevant to that one leakage finding, not the full project
-(see `ORIGINAL_PROJECT_README.md` for HaRP's own full scope).
+Qwen2.5-3B-based hallucination-detection project; this repo contains only the
+subset of it relevant to that one leakage finding, not the full project.
 
 ## What to look at to verify the claim
 
