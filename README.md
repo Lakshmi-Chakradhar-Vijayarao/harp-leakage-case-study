@@ -1,3 +1,7 @@
+> **Note (October 2026).** "Not All Leaks Are Equal" was an earlier title of the paper now published as *Data Reuse, Not Selection: A Code-Verified Audit of Optimism in Hidden-State Hallucination-Detection Pipelines*. This case study comes from an earlier version of that paper. Current artifact: [`selection-leakage-calibration-audit`](https://github.com/Lakshmi-Chakradhar-Vijayarao/selection-leakage-calibration-audit).
+
+---
+
 # HaRP — Leakage Case Study 1 (companion material for "Not All Leaks Are Equal")
 
 This repository ships the specific code and result logs needed to independently
