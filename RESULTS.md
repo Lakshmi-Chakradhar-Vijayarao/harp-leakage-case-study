@@ -1,5 +1,8 @@
 # HaRP — Complete Numerical Results
 
+> **Status note (20 Nov 2026): two calibration results in this file are withdrawn.** They come from the original HaRP project, whose `calibrate.py` applied `softmax(..., axis=-1)` to one logit per sample, normalising across samples instead of within each one. The estimator's ECE of 0.039 and the temperature-scaling result (ECE 0.395) are therefore not valid. Ranking metrics (AUROC, AUARC) are unaffected. The leakage case study itself does not depend on them.
+
+
 **Model:** Qwen 2.5 3B (instruction-tuned, float16, ~3.2 GB RAM at inference)
 **Dataset:** TruthfulQA — 700 samples (393 correct / 307 hallucinated)
 **Labeling:** ROUGE-L recall ≥ 0.4 against reference answers OR semantic keyword overlap ≥ 0.5
@@ -25,7 +28,7 @@
 | Full system AUROC (OOF) | **0.775 ± 0.042** | Exp 24 |
 | Test AUROC | 0.787, CI [0.706, 0.866] | Exp 24 |
 | AUARC | 0.749 | Exp 24 |
-| ECE (failure estimator) | **0.039** (vs 0.072 raw LLM) | Exp 15 |
+| ECE (failure estimator) | ~~0.039~~ withdrawn (calibration code bug) | Exp 15 |
 | Activation steering improvement (best case) | ~0.05 (not significant) | Exp 22c |
 | Confident hallucination steering delta | 0.007 (within noise) | Exp 22c |
 
@@ -239,17 +242,17 @@ Class-weighted (`class_weight="balanced"`). 5-fold stratified CV, n=700 HS sampl
 | System | ECE (Expected Calibration Error) |
 |--------|----------------------------------|
 | Raw LLM (output probabilities) | 0.072 |
-| Temperature scaling (T* = 0.1) | 0.395 (overcalibration artifact) |
-| **HaRP failure estimator** | **0.039** |
+| Temperature scaling (T* = 0.1) | ~~0.395~~ withdrawn (calibration code bug) |
+| **HaRP failure estimator** | ~~0.039~~ withdrawn |
 
 **Key observations:**
-- ECE 0.039 means the failure estimator's probability scores are well-calibrated.
+- ~~ECE 0.039 means the failure estimator's probability scores are well-calibrated.~~ Withdrawn (see the status note).
   When it reports P(failure) = 0.7, the actual failure rate among such samples is close to 70%.
 - This is important for the governance policy: threshold-based routing relies on P(failure)
   being a meaningful probability, not just a ranking score.
 - The raw LLM's ECE of 0.072 reflects overconfidence on incorrect answers — the model
   is miscalibrated in exactly the way that makes hallucinations dangerous.
-- Temperature scaling overcalibrates (ECE = 0.395), suggesting the miscalibration is
+- **Withdrawn (code bug):** ~~Temperature scaling overcalibrates (ECE = 0.395)~~, suggesting the miscalibration is
   not simply scale-factor correctable.
 
 ---
@@ -386,7 +389,7 @@ Seven independent measurements all point to L32 as the critical depth:
 | Group C ablation (Exp 24) | Full system AUROC | 0.771 — plateau of the ablation |
 | Steering vector (Exp 10) | Mean-difference vector | Separation = 2.68 (meaningful direction exists) |
 | Logit lens (Exp 08) | Layer-by-layer prediction | Early commitment at L4, decision encoded by L32 |
-| Calibration (Exp 15) | ECE of L32-based estimator | 0.039 — probability scores are meaningful |
+| Calibration (Exp 15) | ECE of L32-based estimator | ~~0.039~~ withdrawn (code bug) |
 
 **Convergence:** The probe AUROC, OOF Group C AUROC, and full-system ablation all reach
 the same ceiling (~0.77). This confirms that L32 hidden states represent a consistent,
