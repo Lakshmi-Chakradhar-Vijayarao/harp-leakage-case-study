@@ -1,3 +1,5 @@
+> **Note (Nov 2026).** This is the original HaRP project's results write-up, copied here for one row only: the cross-check of the fixed out-of-fold AUROC (0.7583 ± 0.0096). Other results in it are superseded: the temperature-scaling calibration results were withdrawn on 20 Nov 2026 (a softmax bug), and "OOD 0.775" was in-domain. See the status note in [harp](https://github.com/Lakshmi-Chakradhar-Vijayarao/harp).
+
 # HaRP — Complete Numerical Results
 
 > **Status note (20 Nov 2026): two calibration results in this file are withdrawn.** They come from the original HaRP project, whose `calibrate.py` applied `softmax(..., axis=-1)` to one logit per sample, normalising across samples instead of within each one. The estimator's ECE of 0.039 and the temperature-scaling result (ECE 0.395) are therefore not valid. Ranking metrics (AUROC, AUARC) are unaffected. The leakage case study itself does not depend on them.
